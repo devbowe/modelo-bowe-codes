@@ -1,3 +1,51 @@
-body {
-    background-color: red;
+:root {
+    --spacing: 4rem;
+
+    @media screen and (min-width: 45em) {
+        --spacing: 4.5rem;
+    }
+
+    @media screen and (min-width: 80em) {
+        --spacing: 5rem;
+    }
+}
+
+html {
+    font-size: 93.75%;
+
+    @media screen and (min-width: 45em) {
+        font-size: 100%;
+    }
+}
+
+* {
+    font-family: "Lato", sans-serif;
+}
+
+.container {
+    width: min(90%, 80em);
+    margin-inline: auto;
+}
+
+.flow {
+    --gap: 1rem;
+
+    p + p {
+        margin-top: var(--gap);
+    }
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    max-width: max-content;
+
+    background-color: lightcoral;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+
+    &.mt {
+        margin-top: 2.25rem;
+    }
 }

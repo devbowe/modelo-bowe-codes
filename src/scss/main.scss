@@ -1,2 +1,65 @@
 @use "./reset/reset.scss";
 @use "./global/global.scss";
+
+.teste-01 {
+    padding-block: var(--spacing);
+
+    &__container {
+        display: grid;
+        gap: 3rem;
+
+        h2 {
+            margin-bottom: 2rem;
+            font-size: clamp(2rem, 3.5vw, 2.5rem);
+            line-height: 1.3;
+        }
+
+        @media screen and (min-width: 45em) {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+        }
+    }
+}
+
+.teste-02 {
+    padding-block: var(--spacing);
+
+    &__container {
+        display: grid;
+        gap: 3rem;
+
+        h2 {
+            margin-bottom: 2rem;
+            font-size: clamp(2rem, 3.5vw, 2.5rem);
+            line-height: 1.3;
+        }
+    }
+
+    @media screen and (min-width: 45em) {
+        padding: 0;
+        position: relative;
+
+        &__container {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+
+            .content {
+                padding-block: var(--spacing);
+            }
+
+            .image {
+                position: absolute;
+                inset: 0 0 0 52%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                }
+            }
+        }
+    }
+}
