@@ -1,0 +1,21 @@
+.page-header {
+    background-image: linear-gradient(
+        230deg,
+        hsl(0deg 0% 20%) 0%,
+        hsl(344deg 0% 19%) 10%,
+        hsl(344deg 0% 17%) 20%,
+        hsl(344deg 0% 16%) 30%,
+        hsl(344deg 0% 15%) 40%,
+        hsl(0deg 0% 13%) 50%,
+        hsl(344deg 0% 12%) 60%,
+        hsl(344deg 0% 11%) 70%,
+        hsl(344deg 0% 9%) 80%,
+        hsl(344deg 0% 8%) 90%,
+        hsl(0deg 0% 7%) 100%
+    );
+    padding-block: 0.75rem;
+}
+
+.page-header img {
+    max-width: 7rem;
+}
