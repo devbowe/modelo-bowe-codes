@@ -27,6 +27,10 @@ html {
     margin-inline: auto;
 }
 
+.spacing {
+    padding-block: var(--spacing);
+}
+
 .flow {
     --gap: 1rem;
 
@@ -47,5 +51,9 @@ html {
 
     &.mt {
         margin-top: 2.25rem;
+    }
+
+    &.center {
+        margin-inline: auto;
     }
 }
