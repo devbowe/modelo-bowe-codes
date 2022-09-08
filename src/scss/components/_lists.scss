@@ -1,0 +1,23 @@
+.list-001 {
+    --columns-size: 10rem;
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-block: 3.5rem;
+    text-align: center;
+
+    li {
+        flex: 0 0 var(--columns-size);
+        display: grid;
+        gap: 0.65rem;
+
+        img {
+            margin-inline: auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+}

@@ -19,24 +19,7 @@ html {
 }
 
 * {
-    font-family: "Poppins", sans-serif;
-}
-
-.container {
-    width: min(90%, 80em);
-    margin-inline: auto;
-}
-
-.spacing {
-    padding-block: var(--spacing);
-}
-
-.flow {
-    --gap: 1rem;
-
-    p + p {
-        margin-top: var(--gap);
-    }
+    font-family: var(--ff-primary, "Poppins", sans-serif);
 }
 
 .btn {
@@ -55,5 +38,21 @@ html {
 
     &.center {
         margin-inline: auto;
+    }
+}
+
+section.active {
+    position: relative;
+
+    &::after {
+        content: attr(data-code);
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0 0 0 / 0.8);
+        color: white;
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        font-size: 3rem;
     }
 }

@@ -25,6 +25,19 @@
 
         <!-- Only this page css -->
         <link rel="stylesheet" href="src/THIS_PAGE/style.css" />
+
+        <!-- JS -->
+        <script src="src/js/dev.js" defer></script>
+
+        <style>
+            :root {
+                --clr-accent-primary: red;
+                --clr-accent-secondary: blue;
+                --clr-accent-tertiary: green;
+                --clr-neutral-100: #fefefe;
+                --clr-neutral-900: #999;
+            }
+        </style>
     </head>
     <body>
         <header class="page-header">
@@ -33,11 +46,11 @@
             </div>
         </header>
 
-        <!-- Teste 01 -->
-        <section class="section-001">
+        <!-- 001 -->
+        <section class="section-001 spacing" data-code="001">
             <div class="container flow section-001__container">
                 <div class="content">
-                    <h2>Lorem ipsum dolor sit.</h2>
+                    <h2 class="section-title">Lorem ipsum dolor sit.</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Qui ducimus fugiat soluta aut in illum repudiandae
@@ -62,40 +75,11 @@
             </div>
         </section>
 
-        <!-- Teste 01 - Reverso -->
-        <section class="section-001">
-            <div class="container flow section-001__container reverse">
-                <div class="content">
-                    <h2>Lorem ipsum dolor sit.</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Qui ducimus fugiat soluta aut in illum repudiandae
-                        facilis optio mollitia quod? Placeat nam itaque natus
-                        labore iure explicabo voluptatibus architecto hic.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptate tempora quasi ut rerum minima officia et
-                        itaque consequatur earum consectetur. Rerum ducimus
-                        aliquid itaque, reprehenderit magnam inventore sit quod
-                        nemo!
-                    </p>
-
-                    <a href="#" class="btn mt">Lorem, ipsum</a>
-                </div>
-
-                <div class="image">
-                    <img src="https://picsum.photos/500" alt="" />
-                </div>
-            </div>
-        </section>
-
-        <!-- Teste 02 -->
-        <section class="section-002">
+        <!-- 002 -->
+        <section class="section-002" data-code="002">
             <div class="container flow section-002__container">
                 <div class="content">
-                    <h2>
+                    <h2 class="section-title">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Optio, ab.
                     </h2>
@@ -122,51 +106,21 @@
             </div>
         </section>
 
-        <!-- Teste 02 - Reverso -->
-        <section class="section-002">
-            <div class="container flow section-002__container reverse">
-                <div class="content">
-                    <h2>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Optio, ab.
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Qui ducimus fugiat soluta aut in illum repudiandae
-                        facilis optio mollitia quod? Placeat nam itaque natus
-                        labore iure explicabo voluptatibus architecto hic.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptate tempora quasi ut rerum minima officia et
-                        itaque consequatur earum consectetur. Rerum ducimus
-                        aliquid itaque, reprehenderit magnam inventore sit quod
-                        nemo!
-                    </p>
-                    <a href="#" class="btn mt">Lorem, ipsum dolor amet</a>
-                </div>
-
-                <div class="image">
-                    <img src="https://picsum.photos/1000" alt="" />
-                </div>
-            </div>
-        </section>
-
-        <section class="section-003 spacing">
+        <!-- 003 -->
+        <section class="section-003 spacing" data-code="003">
             <div class="container section-003__container">
                 <h2 class="section-title center">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Beatae, dignissimos?
                 </h2>
-                <p>
+                <p class="center">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quaerat, alias cum ratione nihil quia saepe illum dolores
                     voluptas nesciunt, autem aliquid quis consequatur! Enim aut,
                     dolorum sapiente cum maiores nostrum!
                 </p>
 
-                <ul>
+                <ul class="list-001">
                     <li>
                         <img
                             src="https://picsum.photos/50"

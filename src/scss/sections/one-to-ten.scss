@@ -1,0 +1,103 @@
+.section-001 {
+    &__container {
+        display: grid;
+        gap: 3rem;
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        @media screen and (min-width: 45em) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "content image";
+            align-items: center;
+            gap: 4rem;
+
+            .content {
+                grid-area: content;
+            }
+
+            .image {
+                grid-area: image;
+                display: grid;
+
+                img {
+                    margin-inline: auto;
+                }
+            }
+
+            &.reverse {
+                grid-template-areas: "image content";
+            }
+        }
+    }
+}
+
+.section-002 {
+    padding-block: var(--spacing);
+
+    &__container {
+        display: grid;
+        gap: 3rem;
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+    }
+
+    @media screen and (min-width: 45em) {
+        padding: 0;
+        position: relative;
+
+        &__container {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+
+            .content {
+                padding-block: var(--spacing);
+            }
+
+            .image {
+                --side-position: 50%;
+                position: absolute;
+                inset: 0 0 0 var(--side-position);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                }
+            }
+
+            &.reverse {
+                .content {
+                    grid-column: 2/3;
+                }
+
+                .image {
+                    inset: 0 var(--side-position) 0 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 75em) {
+        &__container {
+            gap: 6rem;
+
+            .image {
+                --side-position: 50%;
+            }
+        }
+    }
+}
+
+.section-003 {
+    &__container {
+        > p {
+            margin-top: 1.5rem;
+        }
+    }
+}
