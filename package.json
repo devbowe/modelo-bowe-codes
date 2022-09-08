@@ -7,7 +7,7 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "sass": "sass --watch src/scss/main.scss src/css/style.css --style compressed",
+        "sass": "sass --watch src/scss/main.scss public/css/style.css --style compressed",
         "start": "npm-run-all --parallel sass dev"
     },
     "devDependencies": {
