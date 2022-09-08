@@ -19,3 +19,19 @@
 .page-header img {
     max-width: 7rem;
 }
+
+section.active {
+    position: relative;
+}
+
+section.active::after {
+    content: attr(data-code);
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0 0 0 / 0.8);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 3rem;
+}

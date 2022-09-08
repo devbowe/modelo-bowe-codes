@@ -1,12 +1,12 @@
 :root {
-    --spacing: 4rem;
+    --spacing: 4rem; //64 px
 
     @media screen and (min-width: 45em) {
-        --spacing: 4.5rem;
+        --spacing: 4.5rem; //72 px
     }
 
     @media screen and (min-width: 80em) {
-        --spacing: 5rem;
+        --spacing: 5rem; //80 px
     }
 }
 
@@ -28,7 +28,8 @@ html {
     display: block;
     max-width: max-content;
 
-    background-color: lightcoral;
+    background-color: var(--clr-accent-primary, #000);
+    color: var(--clr-btn, #fff);
     padding: 0.5rem 1.5rem;
     font-weight: 600;
 
@@ -38,21 +39,5 @@ html {
 
     &.center {
         margin-inline: auto;
-    }
-}
-
-section.active {
-    position: relative;
-
-    &::after {
-        content: attr(data-code);
-        position: absolute;
-        inset: 0;
-        background-color: rgba(0 0 0 / 0.8);
-        color: white;
-        display: grid;
-        place-items: center;
-        font-weight: 700;
-        font-size: 3rem;
     }
 }

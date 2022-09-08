@@ -51,8 +51,8 @@ $font-sizes: (
     xs: ".75rem",
     sm: ".85rem",
     md: "1rem",
-    lg: "1.1258rem",
-    xl: "1.125rem",
+    lg: "1.125rem",
+    xl: "1.25rem",
 );
 
 @each $name, $size in $font-sizes {
@@ -69,3 +69,34 @@ $font-weights: (300, 400, 500, 600, 700);
         font-weight: #{$weight};
     }
 }
+
+//Spaces
+$spaces: (
+    1: ".25rem",
+    2: ".5rem",
+    3: "1rem",
+    4: "1.125rem",
+    5: "1.25rem",
+    6: "1.5rem",
+    7: "1.75rem",
+    8: "2rem",
+    9: "2.25rem",
+    10: "2.5rem",
+);
+
+$directions: (
+    "mt": "margin-top",
+    "mb": "margin-bottom",
+    "m-block": "margin-block",
+    "pt": "padding-top",
+    "pb": "padding-bottom",
+    "p-block": "padding-block",
+);
+
+@each $index, $space in $spaces {
+    @each $shortcode, $direction in $directions {
+        .#{$shortcode}-#{$index} {
+            #{$direction}: #{$space};
+        }
+    }
+} ;
