@@ -3,28 +3,26 @@
         display: grid;
         gap: var(--grid-gap, 3rem);
 
-        &:has(.image) {
-            @media screen and (min-width: 45em) {
-                grid-template-columns: 1fr 1fr;
-                grid-template-areas: "content image";
-                align-items: center;
+        @media screen and (min-width: 45em) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "content image";
+            align-items: center;
 
-                .content {
-                    grid-area: content;
+            .content {
+                grid-area: content;
+            }
+
+            .image {
+                grid-area: image;
+                display: grid;
+
+                img {
+                    margin-inline: auto;
                 }
+            }
 
-                .image {
-                    grid-area: image;
-                    display: grid;
-
-                    img {
-                        margin-inline: auto;
-                    }
-                }
-
-                &.reverse {
-                    grid-template-areas: "image content";
-                }
+            &.reverse {
+                grid-template-areas: "image content";
             }
         }
     }
