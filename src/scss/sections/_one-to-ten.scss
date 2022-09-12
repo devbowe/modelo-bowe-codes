@@ -92,3 +92,11 @@
         }
     }
 }
+
+.section-004 {
+    &__container {
+        p {
+            max-width: var(--width, 60ch);
+        }
+    }
+}
