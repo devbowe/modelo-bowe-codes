@@ -1,13 +1,17 @@
 :root {
-    --spacing: 4rem; //64 px
+    --spacing: 4rem;
 
     @media screen and (min-width: 45em) {
-        --spacing: 4.5rem; //72 px
+        --spacing: 4.65rem;
     }
 
     @media screen and (min-width: 80em) {
-        --spacing: 5rem; //80 px
+        --spacing: 5.25rem;
     }
+}
+
+* {
+    font-family: var(--ff-primary, "Poppins", sans-serif);
 }
 
 html {
@@ -23,16 +27,12 @@ body {
     color: var(--clr-text, #000000);
 }
 
-* {
-    font-family: var(--ff-primary, "Poppins", sans-serif);
+p {
+    max-width: var(--width, unset);
 }
 
 .section-title {
-    font-family: var(--ff-title, sans-serif);
-
-    > * {
-        font-family: inherit;
-    }
+    max-width: var(--width, unset);
 }
 
 .btn {
@@ -46,4 +46,12 @@ body {
     color: var(--clr-btn, #fff);
     padding: 0.5rem 1.5rem;
     font-weight: 600;
+}
+
+.custom-span {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.125rem;
+    font-size: 0.9rem;
+    display: block;
 }
