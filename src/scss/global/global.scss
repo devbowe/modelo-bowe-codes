@@ -18,8 +18,21 @@ html {
     }
 }
 
+body {
+    background-color: var(--clr-body, #ffffff);
+    color: var(--clr-text, #000000);
+}
+
 * {
     font-family: var(--ff-primary, "Poppins", sans-serif);
+}
+
+.section-title {
+    font-family: var(--ff-title, sans-serif);
+
+    > * {
+        font-family: inherit;
+    }
 }
 
 .btn {
@@ -27,17 +40,10 @@ html {
     font-size: 1rem;
     display: block;
     max-width: max-content;
+    text-align: center;
 
     background-color: var(--clr-accent-primary, #000);
     color: var(--clr-btn, #fff);
     padding: 0.5rem 1.5rem;
     font-weight: 600;
-
-    &.mt {
-        margin-top: 2.25rem;
-    }
-
-    &.center {
-        margin-inline: auto;
-    }
 }

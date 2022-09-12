@@ -1,7 +1,10 @@
 @use "./reset/reset.scss";
-
 @use "./global/global.scss";
-@use "./global/utility.scss";
+
+@use "./utility/classes.scss";
+@use "./utility/colors.scss";
+@use "./utility/fonts.scss";
+@use "./utility/spaces.scss";
 
 @use "./components/lists";
 @use "./components/forms";

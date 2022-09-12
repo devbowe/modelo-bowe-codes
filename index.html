@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
             rel="stylesheet"
         />
 
@@ -28,22 +28,91 @@
 
         <!-- JS -->
         <script src="/js/dev.js" defer></script>
-
+        <!-- 
         <style>
-            /* :root {
-                --clr-accent-primary: red;
-                --clr-accent-secondary: blue;
-                --clr-accent-tertiary: green;
-                --clr-neutral-100: #fefefe;
-                --clr-neutral-900: #999;
-                --clr-btn: blue;
-            } */
-        </style>
+            :root {
+                --clr-accent-primary: #f56781;
+                --clr-accent-secondary: #00c3f2;
+                --clr-accent-tertiary: #00e284;
+                --clr-neutral-100: #ffffff;
+                --clr-neutral-200: #f5f5f5;
+                --clr-neutral-300: #dcdcdc;
+                --clr-neutral-400: #d3d3d3;
+                --clr-neutral-500: #c0c0c0;
+                --clr-neutral-600: #a0a0a0;
+                --clr-neutral-700: #787878;
+                --clr-neutral-800: #101010;
+                --clr-neutral-900: #000000;
+
+                --ff-primary: "Poppins", sans-serif;
+                --ff-title: "Bebas Neue", cursive;
+                --ff-tertiary: sans-serif;
+
+                --clr-btn: white;
+                --clr-body: #ffffff;
+                --clr-text: #000000;
+            }
+        </style> -->
     </head>
     <body>
         <header class="page-header">
             <div class="container">
                 <img src="./images/logo.png" alt="Bowe logo" />
+            </div>
+
+            <button class="modalbtn">Estilos</button>
+
+            <div class="modal">
+                <h2>Estilos</h2>
+                <button class="close-modal close">X</button>
+                <div>
+                    <form class="styles" name="styles">
+                        <label>
+                            Cor fundo:
+                            <input
+                                type="color"
+                                name="clr-body"
+                                value="#ffffff"
+                            />
+                        </label>
+
+                        <label>
+                            Cor texto:
+                            <input
+                                type="color"
+                                name="clr-text"
+                                value="#000000"
+                            />
+                        </label>
+
+                        <label>
+                            Cor botão:
+                            <input type="color" name="clr-btn" />
+                        </label>
+
+                        <label>
+                            Cor primária:
+                            <input type="color" name="clr-accent-primary" />
+                        </label>
+
+                        <label>
+                            Fonte geral:
+                            <input type="text" name="ff-primary" />
+                        </label>
+
+                        <label>
+                            Fonte título:
+                            <input type="text" name="ff-title" />
+                        </label>
+
+                        <button
+                            type="submit"
+                            class="modalbtn modalbtnSubmit reverse"
+                        >
+                            Trocar
+                        </button>
+                    </form>
+                </div>
             </div>
         </header>
 
@@ -51,10 +120,13 @@
         <section class="section-001 spacing" data-code="001">
             <div class="container flow section-001__container">
                 <div class="content">
-                    <h2 class="section-title">Lorem ipsum dolor sit.</h2>
+                    <h2 class="section-title mb-5">
+                        Lorem ipsum
+                        <span class="clr-accent-primary">dolor sit</span> amet
+                        facilis
+                    </h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Qui ducimus fugiat soluta aut in illum repudiandae
+                        Qui ducimus fugiat soluta aut in illum repudiandae
                         facilis optio mollitia quod? Placeat nam itaque natus
                         labore iure explicabo voluptatibus architecto hic.
                     </p>
@@ -67,7 +139,12 @@
                         nemo!
                     </p>
 
-                    <a href="#" class="btn mt">Lorem, ipsum</a>
+                    <p class="clr-accent-primary fw-700">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Cumque, consectetur?
+                    </p>
+
+                    <a href="#" class="btn mt-9">Lorem, ipsum</a>
                 </div>
 
                 <div class="image">
@@ -80,7 +157,7 @@
         <section class="section-002" data-code="002">
             <div class="container flow section-002__container">
                 <div class="content">
-                    <h2 class="section-title">
+                    <h2 class="section-title mb-5">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Optio, ab.
                     </h2>
@@ -98,7 +175,7 @@
                         aliquid itaque, reprehenderit magnam inventore sit quod
                         nemo!
                     </p>
-                    <a href="#" class="btn mt">Lorem, ipsum dolor amet</a>
+                    <a href="#" class="btn mt-9">Lorem, ipsum dolor amet</a>
                 </div>
 
                 <div class="image">
@@ -110,7 +187,7 @@
         <!-- 003 -->
         <section class="section-003 spacing" data-code="003">
             <div class="container section-003__container">
-                <h2 class="section-title center">
+                <h2 class="section-title center mb-5">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Beatae, dignissimos?
                 </h2>
@@ -197,27 +274,7 @@
                     </li>
                 </ul>
 
-                <a href="#form" class="btn center mt">Lorem, ipsum</a>
-            </div>
-        </section>
-
-        <section class="spacing">
-            <div class="container flow center">
-                <h2 class="section-title mb-4">
-                    Inove com a Lenovo para um futuro mais inteligente
-                </h2>
-                <p>
-                    Impulsione a transformação digital da sua empresa com os
-                    servidores Lenovo combinados com nossas soluções inovadoras
-                    de hiperconvergência e faça do presente o seu futuro
-                    inteligente.
-                </p>
-                <p>
-                    Solicite atendimento com um de nossos especialistas e
-                    alcance um novo potencial em desempenho, escalabilidade e
-                    segurança para o seu data center.
-                </p>
-                <a href="#" class="btn center mt">SOLICITAR ATENDIMENTO</a>
+                <a href="#form" class="btn center mt-9">Lorem, ipsum</a>
             </div>
         </section>
     </body>

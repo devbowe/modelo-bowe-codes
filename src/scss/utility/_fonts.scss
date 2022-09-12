@@ -1,0 +1,32 @@
+// Font sizes
+$font-sizes: (
+    xs: ".75rem",
+    sm: ".85rem",
+    md: "1rem",
+    lg: "1.125rem",
+    xl: "1.25rem",
+);
+
+@each $name, $size in $font-sizes {
+    .fs-#{$name} {
+        font-size: #{$size};
+    }
+}
+
+// Font weights
+$font-weights: (300, 400, 500, 600, 700);
+
+@each $weight in $font-weights {
+    .fw-#{$weight} {
+        font-weight: #{$weight};
+    }
+}
+
+// Font Family
+$font-families: ("ff-primary", "ff-title", "ff-tertiary");
+
+@each $name in $font-families {
+    .#{$name} {
+        font-family: var(--#{$name});
+    }
+}

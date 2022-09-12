@@ -1,33 +1,30 @@
 .section-001 {
     &__container {
         display: grid;
-        gap: 3rem;
+        gap: var(--grid-gap, 3rem);
 
-        h2 {
-            margin-bottom: 2rem;
-        }
+        &:has(.image) {
+            @media screen and (min-width: 45em) {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "content image";
+                align-items: center;
 
-        @media screen and (min-width: 45em) {
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: "content image";
-            align-items: center;
-            gap: 4rem;
-
-            .content {
-                grid-area: content;
-            }
-
-            .image {
-                grid-area: image;
-                display: grid;
-
-                img {
-                    margin-inline: auto;
+                .content {
+                    grid-area: content;
                 }
-            }
 
-            &.reverse {
-                grid-template-areas: "image content";
+                .image {
+                    grid-area: image;
+                    display: grid;
+
+                    img {
+                        margin-inline: auto;
+                    }
+                }
+
+                &.reverse {
+                    grid-template-areas: "image content";
+                }
             }
         }
     }
@@ -38,11 +35,7 @@
 
     &__container {
         display: grid;
-        gap: 3rem;
-
-        h2 {
-            margin-bottom: 2rem;
-        }
+        gap: var(--grid-gap, 3rem);
     }
 
     @media screen and (min-width: 45em) {

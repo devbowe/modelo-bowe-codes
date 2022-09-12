@@ -1,0 +1,21 @@
+// Colors
+$colors: (
+    "clr-accent-primary": "--clr-accent-primary",
+    "clr-accent-secondary": "--clr-accent-secondary",
+    "clr-accent-tertiary": "--clr-accent-tertiary",
+    "clr-neutral-100": "--clr-neutral-100",
+    "clr-neutral-200": "--clr-neutral-200",
+    "clr-neutral-300": "--clr-neutral-300",
+    "clr-neutral-400": "--clr-neutral-400",
+    "clr-neutral-500": "--clr-neutral-500",
+    "clr-neutral-600": "--clr-neutral-600",
+    "clr-neutral-700": "--clr-neutral-700",
+    "clr-neutral-800": "--clr-neutral-800",
+    "clr-neutral-900": "--clr-neutral-900",
+);
+
+@each $name, $color in $colors {
+    .#{$name} {
+        color: var(#{$color}, unset);
+    }
+}

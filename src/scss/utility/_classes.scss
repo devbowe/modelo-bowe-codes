@@ -1,0 +1,35 @@
+.container {
+    width: min(90%, 80em);
+    margin-inline: auto;
+}
+
+.spacing {
+    padding-block: var(--spacing);
+}
+
+.flow {
+    --gap: 1rem;
+
+    p + p {
+        margin-top: var(--gap);
+    }
+}
+
+.center {
+    margin-inline: auto;
+    text-align: center;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.even-columns {
+    display: grid;
+    gap: var(--grid-gap, 1rem);
+
+    @media (min-width: 45em) {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
