@@ -30,28 +30,3 @@ body {
 p {
     max-width: var(--width, unset);
 }
-
-.section-title {
-    max-width: var(--width, unset);
-}
-
-.btn {
-    cursor: pointer;
-    font-size: 1rem;
-    display: block;
-    max-width: max-content;
-    text-align: center;
-
-    background-color: var(--clr-accent-primary, #000);
-    color: var(--clr-btn, #fff);
-    padding: 0.5rem 1.5rem;
-    font-weight: 600;
-}
-
-.custom-span {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 1.125rem;
-    font-size: 0.9rem;
-    display: block;
-}

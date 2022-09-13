@@ -1,4 +1,4 @@
-@use "./reset/reset.scss";
+@use "./global/reset.scss";
 @use "./global/global.scss";
 
 @use "./utility/classes.scss";
@@ -6,9 +6,10 @@
 @use "./utility/fonts.scss";
 @use "./utility/spaces.scss";
 
-@use "./components/lists";
+@use "./components/components";
 @use "./components/forms";
+@use "./components/lists";
 
+@use "./sections/footers.scss";
 @use "./sections/heros";
 @use "./sections/one-to-ten.scss";
-@use "./sections/footers.scss";
