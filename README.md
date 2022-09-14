@@ -115,8 +115,8 @@ font-weights:
 
 ```
 spaces:
-    1: .25rem
-    2: .5rem
+    1: 0.25rem
+    2: 0.5rem
     3: 1rem
     4: 1.125rem
     5: 1.25rem
@@ -151,3 +151,26 @@ directions:
 -   Listas: colocando `style="--columns-size: x"` dentro da tag _ul_, podemos modificar o tamanho mínimo dos elementos que compõem a lista. Ex. `--columns-size: 10rem` significa que nenhum item da lista terá menos que **10rem** de largua. Isso garante a responsividade em todos os dispositivos. O tamanho padrão de items de lista é **20rem**.
 
 -   Dentro de elementos com a classe `container`, onde temos divisão de conteúdo (grid, flex) podemos utilizar `style="--grid-gap: x"` para definir um valor customizado para o gap. Vale ressaltar que o valor fixado aqui não se torna responsivo.
+
+### Classes utilitárias
+
+```
+.container
+.spacing
+.flow
+.center
+.pos-rel
+.even-columns
+```
+
+-   **container**: `1280px` de largura máxima e `5%` de espaçamento lateral.
+
+-   **spacing**: aplica padding no eixo Y. O espaço aplicado é definido pela propriedade `--spacing`
+
+-   **flow**: busca por todas as tags `<p>` e aplica o espaçamento padrão entre os parágrafos.
+
+-   **center**: aplica `text-align: center` e `margin-inline: auto` no elemento (ou todos abaixo dele).
+
+-   **pos-rel**: `position: relative`, facilita para posicionar elementos flutuantes, etc.
+
+-   **even-columns**:

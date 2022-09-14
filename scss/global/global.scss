@@ -27,6 +27,12 @@ body {
     color: var(--clr-text, #000000);
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     max-width: var(--width, unset);
 }

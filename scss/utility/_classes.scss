@@ -26,10 +26,11 @@
 
 .even-columns {
     display: grid;
-    gap: var(--grid-gap, 1rem);
+    gap: var(--grid-gap, 3rem);
 
     @media (min-width: 45em) {
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
+        gap: 4rem;
     }
 }
