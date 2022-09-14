@@ -1,4 +1,4 @@
-.page-header {
+.page-header-wrapper {
     background-image: linear-gradient(
         230deg,
         hsl(0deg 0% 20%) 0%,
@@ -14,6 +14,9 @@
         hsl(0deg 0% 7%) 100%
     );
     padding-block: 0.75rem;
+}
+
+.page-header {
     display: flex;
     justify-content: space-between;
     padding-inline: 2rem;

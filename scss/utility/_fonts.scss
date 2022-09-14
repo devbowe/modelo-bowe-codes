@@ -1,10 +1,15 @@
 // Font sizes
 $font-sizes: (
-    xs: ".75rem",
-    sm: ".85rem",
-    md: "1rem",
-    lg: "1.125rem",
-    xl: "1.25rem",
+    1: ".75rem",
+    2: ".85rem",
+    3: "1rem",
+    4: "1.125rem",
+    5: "1.25rem",
+    6: "1.5rem",
+    7: "1.75rem",
+    8: "2rem",
+    9: "2.25rem",
+    10: "2.5rem",
 );
 
 @each $name, $size in $font-sizes {

@@ -76,16 +76,20 @@
 ### Font Size
 
 -   prefixo **fs-**
--   exemplo **fs-xs** ou **fs-lg**
+-   exemplo **fs-1** ou **fs-8**
 
 ```
 font-sizes:
-    xs: .75rem
-    sm: .85rem
-    md: 1rem
-    lg: 1.125rem
-    xl: 1.25rem
-
+    1: 0.75rem
+    2: 0.85rem
+    3: 1rem
+    4: 1.125rem
+    5: 1.25rem
+    6: 1.5rem
+    7: 1.75rem
+    8: 2rem
+    9: 2.25rem
+    10: 2.5rem
 ```
 
 ### Font Weights
@@ -141,3 +145,9 @@ directions:
     --columns-size: "";
     --grid-gap: "";
 ```
+
+-   Tags `p` e títulos (`h`\*): qualquer tag `<p>` ou qualquer tag de heading (`<h1>`, `<h2>`, `<h3>`...) podem ter seu tamanho definido aplicando o atributo `style="--width: x"` dentro da tag. Caso necessite centralizar o texto, utilizar a classe `center` em conjunto. Uma boa prática para tornar tudo responsivo: utilizar a medida `ch` (quantidade de caracteres) para definir a largura.
+
+-   Listas: colocando `style="--columns-size: x"` dentro da tag _ul_, podemos modificar o tamanho mínimo dos elementos que compõem a lista. Ex. `--columns-size: 10rem` significa que nenhum item da lista terá menos que **10rem** de largua. Isso garante a responsividade em todos os dispositivos. O tamanho padrão de items de lista é **20rem**.
+
+-   Dentro de elementos com a classe `container`, onde temos divisão de conteúdo (grid, flex) podemos utilizar `style="--grid-gap: x"` para definir um valor customizado para o gap. Vale ressaltar que o valor fixado aqui não se torna responsivo.
