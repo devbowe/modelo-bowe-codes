@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Modelo Bowe - Developer Codes</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Favicon -->
+        <link
+            rel="shortcut icon"
+            href="./images/favicon.ico"
+            type="image/x-icon"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- Only this page css -->
+        <link rel="stylesheet" href="THIS_PAGE/style.css" />
+
+        <!-- JS -->
+        <script src="js/dev.js" type="module" defer></script>
+
+        <style>
+            :root {
+                --clr-accent-primary: #f56781;
+                --clr-accent-secondary: #00c3f2;
+                --clr-accent-tertiary: #00e284;
+                --clr-neutral-100: #ffffff;
+                --clr-neutral-200: #f5f5f5;
+                --clr-neutral-300: #dcdcdc;
+                --clr-neutral-400: #d3d3d3;
+                --clr-neutral-500: #c0c0c0;
+                --clr-neutral-600: #a0a0a0;
+                --clr-neutral-700: #787878;
+                --clr-neutral-800: #101010;
+                --clr-neutral-900: #000000;
+
+                /* --clr-placeholder: red; */
+
+                --ff-primary: "Poppins", sans-serif;
+                --ff-title: "Bebas Neue", cursive;
+                --ff-tertiary: sans-serif;
+
+                --clr-btn: white;
+                --clr-body: #ffffff;
+                --clr-text: #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page-header-wrapper">
+            <header class="page-header">
+                <div class="container">
+                    <img src="./images/logo.png" alt="Bowe logo" />
+                </div>
+
+                <button class="modalbtn">Estilos</button>
+
+                <div class="modal">
+                    <h2>Estilos</h2>
+                    <button class="close-modal close">X</button>
+                    <div>
+                        <form class="styles" name="styles">
+                            <label>
+                                Cor fundo:
+                                <input
+                                    type="color"
+                                    name="clr-body"
+                                    value="#ffffff"
+                                />
+                            </label>
+
+                            <label>
+                                Cor texto:
+                                <input
+                                    type="color"
+                                    name="clr-text"
+                                    value="#000000"
+                                />
+                            </label>
+
+                            <label>
+                                Cor botão:
+                                <input type="color" name="clr-btn" />
+                            </label>
+
+                            <label>
+                                Cor primária:
+                                <input type="color" name="clr-accent-primary" />
+                            </label>
+
+                            <label>
+                                Fonte geral:
+                                <input type="text" name="ff-primary" />
+                            </label>
+
+                            <label>
+                                Fonte título:
+                                <input type="text" name="ff-title" />
+                            </label>
+
+                            <button
+                                type="submit"
+                                class="modalbtn modalbtnSubmit reverse"
+                            >
+                                Trocar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <section class="container spacing" style="display: grid; gap: 5rem">
+            <form class="form-001" data-code="form-001">
+                <input type="text" placeholder="Nome:" name="nome" />
+                <input
+                    type="text"
+                    placeholder="E-mail corporativo:"
+                    name="email"
+                />
+                <input
+                    type="text"
+                    placeholder="Telefone celular:"
+                    name="phone"
+                />
+                <input type="text" placeholder="Empresa:" name="empresa" />
+                <select name="cargo">
+                    <option value="">Cargo:</option>
+                </select>
+                <select name="funcionarios">
+                    <option value="">Nº de funcionários:</option>
+                </select>
+
+                <label class="consent-wrapper">
+                    <input type="checkbox" name="consent" />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatem ratione sequi aliquid iusto nobis suscipit magni,
+                    quod vero eos temporibus.
+                </label>
+
+                <button type="submit" class="btn btn-form">Enviar</button>
+            </form>
+
+            <form class="form-002" data-code="form-002">
+                <label>
+                    Nome*
+                    <input type="text" name="nome" />
+                </label>
+                <label>
+                    E-mail corporativo*
+                    <input type="text" name="email" />
+                </label>
+                <label>
+                    Número de telefone*
+                    <input type="text" name="phone" />
+                </label>
+                <label>
+                    Empresa*
+                    <input type="text" name="empresa" />
+                </label>
+                <label>
+                    Cargo*
+                    <select name="cargo">
+                        <option value=""></option>
+                    </select>
+                </label>
+
+                <label>
+                    Número de funcionários*
+                    <select name="funcionarios">
+                        <option value=""></option>
+                    </select>
+                </label>
+
+                <label class="consent-wrapper">
+                    <input type="checkbox" name="consent" />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatem ratione sequi aliquid iusto nobis suscipit magni,
+                    quod vero eos temporibus.
+                </label>
+
+                <button type="submit" class="btn btn-form center">
+                    Enviar
+                </button>
+            </form>
+
+            <form class="form-003" data-code="form-003">
+                <label>
+                    Nome*
+                    <input type="text" name="nome" />
+                </label>
+                <label>
+                    E-mail corporativo*
+                    <input type="text" name="email" />
+                </label>
+                <label>
+                    Número de telefone*
+                    <input type="text" name="phone" />
+                </label>
+                <label>
+                    Empresa*
+                    <input type="text" name="empresa" />
+                </label>
+                <label>
+                    Cargo*
+                    <select name="cargo">
+                        <option value=""></option>
+                    </select>
+                </label>
+
+                <label>
+                    Número de funcionários*
+                    <select name="funcionarios">
+                        <option value=""></option>
+                    </select>
+                </label>
+
+                <label class="consent-wrapper">
+                    <input type="checkbox" name="consent" />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatem ratione sequi aliquid iusto nobis suscipit magni,
+                    quod vero eos temporibus.
+                </label>
+
+                <button type="submit" class="btn btn-form center">
+                    Enviar
+                </button>
+            </form>
+
+            <form class="form-004" data-code="form-004">
+                <div class="field-wrapper">
+                    <input type="text" name="nome" />
+                    <label for="name">Nome</label>
+                </div>
+
+                <div class="field-wrapper">
+                    <input type="text" name="email" />
+                    <label for="email">E-mail</label>
+                </div>
+
+                <div class="field-wrapper">
+                    <input type="text" name="telefone" />
+                    <label for="email">Telefone*</label>
+                </div>
+
+                <div class="field-wrapper">
+                    <input type="text" name="empresa" />
+                    <label for="company">Empresa</label>
+                </div>
+
+                <div class="field-wrapper">
+                    <select name="cargo">
+                        <option value=""></option>
+                    </select>
+                    <label>Cargo</label>
+                </div>
+
+                <div class="field-wrapper">
+                    <select name="funcionarios">
+                        <option value=""></option>
+                    </select>
+                    <label>Nº de funcionários*</label>
+                </div>
+
+                <button type="submit" class="btn btn-form">Enviar</button>
+            </form>
+        </section>
+
+        <!-- FORM -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <!-- <script src="js/validation.js"></script> -->
+    </body>
+</html>

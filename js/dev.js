@@ -1,10 +1,10 @@
-const sections = document.querySelectorAll("[data-code]");
+const elements = document.querySelectorAll("[data-code]");
 
-sections.forEach((section) => {
-    section.addEventListener("dblclick", (e) => {
-        section.classList.toggle("active");
+elements.forEach((el) => {
+    el.addEventListener("dblclick", (e) => {
+        el.classList.toggle("active");
 
-        const htmlCode = section.outerHTML;
+        const htmlCode = el.outerHTML;
         window.navigator.clipboard.writeText(htmlCode);
     });
 });

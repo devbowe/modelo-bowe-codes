@@ -4,6 +4,8 @@
     display: block;
     max-width: max-content;
     text-align: center;
+    outline: none;
+    border: none;
 
     background-color: var(--clr-accent-primary, #000);
     color: var(--clr-btn, #fff);
@@ -17,4 +19,10 @@
     margin-bottom: 1.125rem;
     font-size: 0.9rem;
     display: block;
+}
+
+.section-title {
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    line-height: 1.22;
+    font-weight: 700;
 }

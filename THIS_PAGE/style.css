@@ -27,11 +27,11 @@
     max-width: 7rem;
 }
 
-section.active {
+*.active {
     position: relative;
 }
 
-section.active::after {
+*.active::after {
     content: attr(data-code);
     position: absolute;
     inset: 0;
