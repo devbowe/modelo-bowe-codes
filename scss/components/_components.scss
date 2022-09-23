@@ -7,8 +7,8 @@
     outline: none;
     border: none;
 
-    background-color: var(--clr-accent-primary, #000);
-    color: var(--clr-btn, #fff);
+    background-color: var(--bg-btn, --clr-accent-primary, #000);
+    color: var(--clr-btn, #ffffff);
     padding: 0.75rem 2.5rem;
     font-weight: 600;
 }
