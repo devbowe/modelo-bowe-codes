@@ -60,7 +60,7 @@
     display: none;
 }
 
-.modal.active {
+.modal.modal-active {
     display: unset;
 }
 
@@ -93,6 +93,7 @@
 .modal input {
     display: block;
     width: 100%;
+    border: 1px solid #ccc;
 }
 
 .modal input:not([type="color"]) {

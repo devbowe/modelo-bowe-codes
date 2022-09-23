@@ -38,9 +38,9 @@ formBtn.addEventListener("click", (e) => {
 });
 
 btnOpenForm.addEventListener("click", (e) => {
-    modalForm.classList.add("active");
+    modalForm.classList.add("modal-active");
 });
 
 btnCloseForm.addEventListener("click", (e) => {
-    modalForm.classList.remove("active");
+    modalForm.classList.remove("modal-active");
 });
