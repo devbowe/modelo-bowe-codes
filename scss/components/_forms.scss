@@ -29,7 +29,7 @@ label {
     input:not([type="checkbox"]),
     select {
         border: 1px solid #dcdcdc;
-        min-height: 50px;
+        height: 50px;
         padding-inline: 1rem;
 
         &::placeholder {
@@ -132,5 +132,98 @@ label {
 
     .btn-form {
         min-width: 100%;
+    }
+}
+
+$breakpointFormMobile: 1200px;
+
+.btn-form-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    min-width: 100%;
+    padding-block: 1rem;
+    display: block;
+    z-index: 90;
+
+    @media (min-width: $breakpointFormMobile) {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.form-mobile {
+    position: fixed;
+    z-index: 99;
+    inset: 0;
+    background-color: lightcyan;
+    padding: 3.5rem 5%;
+    overflow: auto;
+
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+
+    &.open {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        -webkit-animation: slide-in-bottom 0.5s
+            cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+            both;
+    }
+}
+
+[data-action="close-form"] {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    font-weight: 700;
+    background: none;
+}
+
+@media screen and (min-width: $breakpointFormMobile) {
+    .form-mobile {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        position: unset;
+    }
+
+    [data-action="close-form"] {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
     }
 }

@@ -121,6 +121,68 @@
         </div>
 
         <section class="container spacing" style="display: grid; gap: 5rem">
+            <div class="form-wrapper form-mobile">
+                <button data-action="close-form" aria-label="Fechar formulário">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 1024 1024"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504L738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512L828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496L285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512L195.2 285.696a64 64 0 0 1 0-90.496z"
+                        />
+                    </svg>
+                </button>
+
+                <div class="center">
+                    <h2 class="mb-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestiae, in?
+                    </h2>
+                    <p class="mb-5">Lorem ipsum dolor sit amet.</p>
+                </div>
+
+                <form class="form-00" data-code="form-001">
+                    <input type="text" placeholder="Nome:" name="nome" />
+                    <input
+                        type="text"
+                        placeholder="E-mail corporativo:"
+                        name="email"
+                    />
+                    <input
+                        type="text"
+                        placeholder="Telefone celular:"
+                        name="phone"
+                    />
+                    <input type="text" placeholder="Empresa:" name="empresa" />
+                    <input type="text" placeholder="Empresa:" name="empresa" />
+                    <input type="text" placeholder="Empresa:" name="empresa" />
+                    <input type="text" placeholder="Empresa:" name="empresa" />
+                    <input type="text" placeholder="Empresa:" name="empresa" />
+                    <input type="text" placeholder="Empresa:" name="empresa" />
+                    <input type="text" placeholder="Empresa:" name="empresa" />
+                    <input type="text" placeholder="Empresa:" name="empresa" />
+                    <select name="cargo">
+                        <option value="">Cargo:</option>
+                    </select>
+                    <select name="funcionarios">
+                        <option value="">Nº de funcionários:</option>
+                    </select>
+
+                    <label class="consent-wrapper">
+                        <input type="checkbox" name="consent" />
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatem ratione sequi aliquid iusto nobis suscipit
+                        magni, quod vero eos temporibus.
+                    </label>
+
+                    <button type="submit" class="btn btn-form">Enviar</button>
+                </form>
+            </div>
+
             <form class="form-001" data-code="form-001">
                 <input type="text" placeholder="Nome:" name="nome" />
                 <input
@@ -274,10 +336,36 @@
 
                 <button type="submit" class="btn btn-form">Enviar</button>
             </form>
+
+            <button class="btn btn-form-mobile" data-action="open-form">
+                ABRIR FORM
+            </button>
         </section>
 
         <!-- FORM -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <!-- <script src="js/validation.js"></script> -->
+
+        <!-- OPEN/CLOSE form script -->
+        <script>
+            const buttonCloseForm = document.querySelector(
+                "[data-action='close-form']"
+            );
+            const buttonOpenForm = document.querySelector(
+                "[data-action='open-form']"
+            );
+            const formWrapper = document.querySelector(".form-mobile");
+            const form = formWrapper.querySelector("form");
+
+            console.log(form);
+
+            buttonOpenForm.addEventListener("click", (e) => {
+                formWrapper.classList.add("open");
+            });
+
+            buttonCloseForm.addEventListener("click", (e) => {
+                formWrapper.classList.remove("open");
+            });
+        </script>
     </body>
 </html>
