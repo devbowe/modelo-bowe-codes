@@ -79,3 +79,32 @@
         justify-content: center;
     }
 }
+
+.list-004 {
+    --columns-size: 14em;
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: var(--grid-gap, clamp(2.25rem, 3.5vw, 3.25rem));
+    padding-block: 3.5rem;
+
+    li {
+        display: grid;
+        gap: 0.5rem;
+        flex: 0 0 var(--columns-size);
+        margin-inline: auto;
+        text-align: center;
+
+        h4 {
+            font-size: clamp(2.25rem, 3.5vw, 2.5rem);
+            line-height: 1.33;
+        }
+
+        p {
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+        }
+    }
+}
