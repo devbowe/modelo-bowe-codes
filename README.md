@@ -14,6 +14,7 @@
     --clr-primary: #f56781;
     --clr-secondary: #00c3f2;
     --clr-tertiary: #00e284;
+
     --clr-neutral-100: #ffffff;
     --clr-neutral-200: #f5f5f5;
     --clr-neutral-300: #dcdcdc;
@@ -23,28 +24,33 @@
     --clr-neutral-700: #787878;
     --clr-neutral-800: #101010;
     --clr-neutral-900: #000000;
+
     --ff-primary: "Poppins", sans-serif;
     --ff-title: "Bebas Neue", cursive;
     --ff-tertiary: sans-serif;
 
     --clr-btn: white;
+    --bg-btn: red;
+
     --clr-body: #ffffff;
     --clr-text: #000000;
+
+    --clr-placeholder: #c7c7c7;
 ```
 
--   As propriedades customizadas podem ser atribuidas à qualquer elemento no HTML com a classe igual à seu nome. Ex: _.clr-primary_ define a cor do elemento para a cor definida.
+-   As propriedades customizadas de cor podem ser atribuidas à qualquer elemento no HTML com a classe igual à seu nome. Ex: _.clr-primary_ define a cor do elemento para a cor definida como primária.
 
 -   Para **background-color**, a lógica é a mesma, porém aqui usamos o prefixo _bg-_. Ex: _bg-clr-primary_
 
--   As definições de fonte são atribuidas ao documento e as tags H\*. Ou seja, a família de fonte definida em _--ff-title_, é atribuida à todos os títulos da página.
+-   As definições de fonte são atribuidas ao documento com a propriedade _--ff-primary_. As tags H\* vão ter a fonte definida em _--ff-title_, se existir. Caso não exista, recebem a fonte primária.
 
--   _--clr-btn_ é para atribuição somente da cor do texto do botão. O motivo é: a cor do fundo é atribuída com base no valor _--clr-primary_.
+-   _--clr-btn_ é para atribuição somente da cor do texto do botão. O motivo é: a cor do fundo é atribuída com base no valor _--bg-btn_, caso existe, se não, é definida pela _--clr-primary_.
 
 ### Reescrevendo componentes
 
--   Todo estilo pode ser reescrito. Essa é a ideia do modelo. Para isso, basta acessar a classe e reestilizar de acordo com o layout proposto. Tamanhos de fonte e espaçamento já estão padronizados, ou seja, basta reescrever cores, tipo de fonte, etc.
+-   Todo estilo pode ser reescrito, essa é a ideia do modelo. Para isso, basta acessar a classe e reestilizar de acordo com o layout proposto. Tamanhos de fonte e espaçamento já estão padronizados, ou seja, basta reescrever cores, tipo de fonte, etc.
 
--   Exemplos: colocar o botão com bordas arredondadas.
+-   Exemplo: colocar o botão com bordas arredondadas.
 
 ```
 .btn {
@@ -52,18 +58,18 @@
 }
 ```
 
--   Exemplos: trocar a cor de fundo de todos os botões
+-   Exemplo: trocar a cor de fundo de todos os botões
 
 ```
 Escreve-se a propriedade CSS:
 
---bg-btn: ""
+--bg-btn: "";
 ```
 
 -   Trocar estilo de todos os títulos de seção:
 
 ```
-.section-title {
+.h2 {
     font-weight: 700;
     color: red;
     text-transform: uppercase;
@@ -86,7 +92,7 @@ Escreve-se a propriedade CSS:
 ### Font Size
 
 -   prefixo **fs-**
--   exemplo **fs-1** ou **fs-8**
+-   exemplos: **fs-1** ou **fs-8**
 
 ```
 font-sizes:
@@ -105,7 +111,7 @@ font-sizes:
 ### Font Weights
 
 -   prefixo **fw-**
--   exemplo **fw-400** ou **fw-700**
+-   exemplo: **fw-400** ou **fw-700**
 
 ```
 font-weights:
@@ -121,10 +127,10 @@ font-weights:
 -   Os elementos dos blocos codados possuem o espaçamento vindo de classe, facilitando qualquer mudança de valor.
 
 -   prefixo **mt-** ou **pb-** etc
--   exemplo **mt-2** ou **pb-7**
+-   exemplos: **mt-2** ou **pb-7**
 
 ```
-spaces:
+valores:
     1: 0.25rem
     2: 0.5rem
     3: 1rem
@@ -137,7 +143,7 @@ spaces:
     10: 3rem
 
 
-directions:
+direções:
     mt: margin-top
     mb: margin-bottom
     m-block: margin-block
@@ -156,9 +162,15 @@ directions:
     --grid-gap: "";
 ```
 
--   Tags `p` e títulos (`h`\*): qualquer tag `<p>` ou qualquer tag de heading (`<h1>`, `<h2>`, `<h3>`...) podem ter seu tamanho definido aplicando o atributo `style="--width: x"` dentro da tag. Caso necessite centralizar o texto, utilizar a classe `center` em conjunto. Uma boa prática para tornar tudo responsivo: utilizar a medida `ch` (quantidade de caracteres) para definir a largura.
+-   Tags `p` e títulos (`h`\*): qualquer tag `<p>` ou qualquer tag de heading (`<h1>`, `<h2>`, `<h3>`...) podem ter sua largua definida aplicando o atributo `style="--width: x"` dentro da tag. Caso necessite centralizar o texto, utilizar a classe `center` em conjunto. Uma boa prática para tornar tudo responsivo: utilizar a medida `ch` (quantidade de caracteres) para definir a largura. Exemplo:
 
--   Listas: colocando `style="--columns-size: x"` dentro da tag _ul_, podemos modificar o tamanho mínimo dos elementos que compõem a lista. Ex. `--columns-size: 10rem` significa que nenhum item da lista terá menos que **10rem** de largua. Isso garante a responsividade em todos os dispositivos. O tamanho padrão de items de lista é **20rem**.
+```
+<p style="--width: 50ch;">Aqui vai um texto legal.</p>
+
+<p class="center" style="--width: 50ch;">Aqui vai um texto legal.</p>
+```
+
+-   **Listas**: colocando `style="--columns-size: x"` dentro da tag _ul_, podemos modificar o tamanho mínimo dos elementos que compõem a lista. Ex. `--columns-size: 10rem` significa que nenhum item da lista terá menos que **10rem** de largua. Isso garante a responsividade em todos os dispositivos. O tamanho padrão de items de lista é **20rem**.
 
 -   Dentro de elementos com a classe `container`, onde temos divisão de conteúdo (grid, flex) podemos utilizar `style="--grid-gap: x"` para definir um valor customizado para o gap. Vale ressaltar que o valor fixado aqui não se torna responsivo.
 
@@ -195,8 +207,76 @@ directions:
 
 -   aqui se encontram todos os modelos de formulários disponíveis: https://modelo-bowe-codes.vercel.app/
 
--   clr-placeholder
--   btn mobile
--   form buttons actions
--   form mobile
--   validações
+### Form mobile
+
+-   IMPORTANTE: para esconder os botões, basta criar uma regra css com breakpoint em 1200px, exemplo:
+
+```
+@media (min-width: 1200px) {
+   .btn {
+        display: none;
+    }
+}
+```
+
+-   Para utilizar um formulário flutuante no mobile, o setup se dá com:
+
+```
+<div class="form-wrapper form-mobile">
+    <button data-action="close-form" aria-label="Fechar formulário">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 1024 1024"
+        >
+            <path
+                fill="currentColor"
+                d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504L738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512L828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496L285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512L195.2 285.696a64 64 0 0 1 0-90.496z"
+            />
+        </svg>
+    </button>
+
+    <div class="center">
+        <h2 class="mb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Molestiae, in?
+        </h2>
+        <p class="mb-5">Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <form></form>
+</div>
+
+<button class="btn btn-form-mobile" data-action="open-form">
+    ABRIR FORM
+</button>
+
+<!-- OPEN/CLOSE form script -->
+<script>
+    const buttonCloseForm = document.querySelector("[data-action='close-form']");
+    const buttonOpenForm = document.querySelector("[data-action='open-form']");
+    const formWrapper = document.querySelector(".form-mobile");
+    const form = formWrapper.querySelector("form");
+
+    buttonOpenForm.addEventListener("click", (e) => {
+        formWrapper.classList.add("open");
+    });
+
+    buttonCloseForm.addEventListener("click", (e) => {
+        formWrapper.classList.remove("open");
+    });
+</script>
+```
+
+-   Na tag **form**, troque pelo formulário desejado. Além disso, o botão de abertura do form e o script de funcionamento devem ser adicionados.
+
+### Estilizando formulário
+
+-   a propriedade `clr-placeholder` define a cor do placeholder dos campos
+-   elementos de estilização tomam como base a cor definida na propriedade _--clr-primary_
+
+## Trabalhando com listas
+
+-   para mudar o tamanho dos elementos, basta aplicar a tag `style="--columns-size: x"`, trocando o `x` pelo novo tamanho. Por padrão, os elementos tem _20rem_. Quanto maior o valor, maior a largura mínima, ou seja, menos colunas em dispositivos maiores.

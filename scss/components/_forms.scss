@@ -6,6 +6,7 @@ label {
     outline: none;
     border: none;
     font-size: 1rem;
+    background-color: transparent;
 }
 
 .consent-wrapper {
@@ -159,7 +160,6 @@ $breakpointFormMobile: 1200px;
     position: fixed;
     z-index: 99;
     inset: 0;
-    background-color: lightcyan;
     padding: 3.5rem 5%;
     overflow: auto;
 
