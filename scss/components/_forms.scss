@@ -39,7 +39,7 @@ label {
         &:focus {
             transition: border-color 200ms ease-in-out;
             will-change: border-color;
-            border-color: var(--clr-accent-primary);
+            border-color: var(--clr-primary);
         }
     }
 
@@ -61,7 +61,7 @@ label {
         will-change: border-color;
 
         &:focus {
-            border-color: var(--clr-accent-primary, unset);
+            border-color: var(--clr-primary, unset);
         }
     }
 
@@ -94,7 +94,7 @@ label {
     gap: 1.25rem;
 
     .field-wrapper {
-        border: 2px solid var(--clr-accent-primary);
+        border: 2px solid var(--clr-primary);
 
         position: relative;
         padding: 0.5rem 1rem;

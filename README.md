@@ -11,9 +11,9 @@
 -   Para definir cores e fontes (famílias) basta escrever propriedades CSS, **após** a folha de estilo do modelo, na tag _:root_ ou na tag _html_. Isso pode ser feito em um arquivo .css ou diretamente no aquivo html. Um exemplo com todas as customizações disponíveis:
 
 ```
-    --clr-accent-primary: #f56781;
-    --clr-accent-secondary: #00c3f2;
-    --clr-accent-tertiary: #00e284;
+    --clr-primary: #f56781;
+    --clr-secondary: #00c3f2;
+    --clr-tertiary: #00e284;
     --clr-neutral-100: #ffffff;
     --clr-neutral-200: #f5f5f5;
     --clr-neutral-300: #dcdcdc;
@@ -32,11 +32,13 @@
     --clr-text: #000000;
 ```
 
--   As propriedades customizadas podem ser atribuidas à qualquer elemento no HTML com a classe igual à seu nome. Ex: _.clr-accent-primary_ define a cor do elemento para a cor definida.
+-   As propriedades customizadas podem ser atribuidas à qualquer elemento no HTML com a classe igual à seu nome. Ex: _.clr-primary_ define a cor do elemento para a cor definida.
+
+-   Para **background-color**, a lógica é a mesma, porém aqui usamos o prefixo _bg-_. Ex: _bg-clr-primary_
 
 -   As definições de fonte são atribuidas ao documento e as tags H\*. Ou seja, a família de fonte definida em _--ff-title_, é atribuida à todos os títulos da página.
 
--   _--clr-btn_ é para atribuição somente da cor do texto do botão. O motivo é: a cor do fundo é atribuída com base no valor _--clr-accent-primary_.
+-   _--clr-btn_ é para atribuição somente da cor do texto do botão. O motivo é: a cor do fundo é atribuída com base no valor _--clr-primary_.
 
 ### Reescrevendo componentes
 
@@ -48,6 +50,14 @@
 .btn {
     border-radius: 100vmax;
 }
+```
+
+-   Exemplos: trocar a cor de fundo de todos os botões
+
+```
+Escreve-se a propriedade CSS:
+
+--bg-btn: ""
 ```
 
 -   Trocar estilo de todos os títulos de seção:
@@ -118,13 +128,13 @@ spaces:
     1: 0.25rem
     2: 0.5rem
     3: 1rem
-    4: 1.125rem
-    5: 1.25rem
-    6: 1.5rem
-    7: 1.75rem
-    8: 2rem
-    9: 2.25rem
-    10: 2.5rem
+    4: 1.25rem
+    5: 1.5rem
+    6: 1.75rem
+    7: 2rem
+    8: 2.25rem
+    9: 2.5rem
+    10: 3rem
 
 
 directions:
@@ -161,6 +171,8 @@ directions:
 .center
 .pos-rel
 .even-columns
+.uppercase
+.lowercase
 ```
 
 -   **container**: `1280px` de largura máxima e `5%` de espaçamento lateral.
@@ -174,3 +186,17 @@ directions:
 -   **pos-rel**: `position: relative`, facilita para posicionar elementos flutuantes, etc.
 
 -   **even-columns**:
+
+-   **uppercase**: transforma o texto em caixa alta
+
+-   **lowercase**: transforma o texto em caixa baixa
+
+### Trabalhando com formulários
+
+-   aqui se encontram todos os modelos de formulários disponíveis: https://modelo-bowe-codes.vercel.app/
+
+-   clr-placeholder
+-   btn mobile
+-   form buttons actions
+-   form mobile
+-   validações
