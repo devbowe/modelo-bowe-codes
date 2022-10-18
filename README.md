@@ -185,6 +185,10 @@ direções:
 .even-columns
 .uppercase
 .lowercase
+
+.al-center
+.al-end
+.al-start
 ```
 
 -   **container**: `1280px` de largura máxima e `5%` de espaçamento lateral.
@@ -202,6 +206,8 @@ direções:
 -   **uppercase**: transforma o texto em caixa alta
 
 -   **lowercase**: transforma o texto em caixa baixa
+
+-   **al**: alinha elementos dentro do container. Deve ser usada somente elementos com classe container.
 
 ### Trabalhando com formulários
 
